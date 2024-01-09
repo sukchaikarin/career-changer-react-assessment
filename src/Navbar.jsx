@@ -3,14 +3,14 @@ const customNav = {
 };
 const Navbar = () => {
     return (
-        <nav style={customNav} className="navbar navbar-expand bg-body-white pt-3">
-        <div className="container-fluid justify-content-end">
-            <ul className="navbar-nav h4 gap-4 ">
+        <nav style={customNav} className="navbar navbar-expand bg-body-white pt-2 ">
+        <div className="container-fluid justify-content-end ">
+            <ul className="navbar-nav h4 gap-4   px-4">
               <li className="nav-item">
-                <a className="nav-link text-dark" aria-current="page" href={'/'}>Home</a>
+                <a className="nav-link text-dark fw-bold" aria-current="page" href={'/'}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark" href={'/owner'}>Owner</a>
+                <a className="nav-link text-dark fw-bold" href={'/owner'}>Owner</a>
               </li>        
             </ul>
          
