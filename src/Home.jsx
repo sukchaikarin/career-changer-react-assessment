@@ -8,6 +8,7 @@ const Home = () => {
   const [sector, setSector] = useState("");
   const [employees, setEmployees] = useState([]);
   const [reload, setReload] = useState(false);
+
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(
@@ -17,15 +18,16 @@ const Home = () => {
         setEmployees(response.data);
       }
     };
-
     getData();
   }, [reload]);
+
   const createData = async (name, lastname, position) => {
     const requestData = {
       name: name,
       lastname: lastname,
       position: position,
     };
+
     const response = await axios.post(
       "https://jsd5-mock-backend.onrender.com/members",
       requestData
@@ -34,8 +36,7 @@ const Home = () => {
     if (response.status === 200) {
       setReload(!reload);
     }
-
-    console.log(response);
+    //console.log(response);
   };
 
   const removeData = async (id) => {
@@ -45,7 +46,7 @@ const Home = () => {
 
     if (response.status === 200) {
       setReload(!reload);
-      console.log(response);
+      //console.log(response);
     }
   };
 

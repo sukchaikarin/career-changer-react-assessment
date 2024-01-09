@@ -1,9 +1,9 @@
 import Createuser from "./Createuser";
 
-const Adminpanel = ({ employees, removeData ,submitHandler }) => {
+const Adminpanel = ({ employees, removeData, submitHandler }) => {
   return (
     <div className="mt-5 container-fluid row justify-content-center">
-     <Createuser submitHandler={ submitHandler }/>
+      <Createuser submitHandler={submitHandler} />
 
       <div className="mt-3 col-6">
         <table className="table table-hover shadow border border-black">
@@ -22,7 +22,13 @@ const Adminpanel = ({ employees, removeData ,submitHandler }) => {
                 <td>{employee.lastname}</td>
                 <td>{employee.position}</td>
                 <td>
-                  <button className="btn btn-outline-danger" id={employee.id} onClick={() => removeData(employee.id)}>Delete</button>
+                  <button
+                    className="btn btn-outline-danger"
+                    id={employee.id}
+                    onClick={() => removeData(employee.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

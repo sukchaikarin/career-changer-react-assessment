@@ -5,8 +5,6 @@ import Owner from "./Owner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-
-
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/owner", element: <Owner /> },
