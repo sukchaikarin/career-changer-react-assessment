@@ -57,7 +57,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <Mainhome onButtonClick={handleButtonClick} />
+      <Mainhome onButtonClick={handleButtonClick} sector={sector} />
       {sector === "User" && <Userpanel employees={employees} />}
       {sector === "Admin" && (
         <Adminpanel
