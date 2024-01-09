@@ -34,6 +34,7 @@ const Home = () => {
 
 
   const createData = async (name, lastname, position) => {
+    
     const requestData = {
       name: name,
       lastname: lastname,

@@ -4,6 +4,14 @@ const Createuser = ({ submitHandler }) => {
     const [lastname, setLastname] = useState();
     const [position, setPosition] = useState();
 
+const clearInput = () =>{
+  setName("");
+  setLastname("");
+  setPosition("");
+}
+
+
+
     return (
         <div className="col-11">
         <h4 className="mb-3">Create User Here</h4>
@@ -28,7 +36,7 @@ const Createuser = ({ submitHandler }) => {
           </div>
           <div className="col-auto">
             <button type="submit" className="btn btn-primary mb-3 shadow"
-            onClick={() => submitHandler(name, lastname, position)}>Save</button>
+            onClick={() =>{submitHandler(name, lastname, position); clearInput();} }>Save</button>
           </div>
         </div>
       </div>
